@@ -167,6 +167,9 @@ class HMM:
         return np.array([self.cost_op(x) for x in X])
 
 
+    def log_likelihood(self, X):
+        return -self.cost_op(X)
+
 def real_signal():
     spf = wave.open('helloworld.wav', 'r')
 
